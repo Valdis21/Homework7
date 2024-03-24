@@ -7,8 +7,8 @@ public class Main {
         int total = 0;
         int mounth = 0;
         while (total <= 2_495_000) {
-            total = total + saving;
             total = total + total / 100;
+            total = total + saving;
             mounth++;
             System.out.println("Месяц " + mounth + " сумма накоплений равна " + total + " рублей.");
         }
@@ -20,8 +20,8 @@ public class Main {
             System.out.print(" " + i + " ");
         }
         System.out.println();
-        for (int a = 10; a >= 1; a--) {
-            System.out.print(" " + a + " ");
+        for (i = 10; i >= 1; i--) {
+            System.out.print(" " + i + " ");
         }
         System.out.println();
 
@@ -30,10 +30,10 @@ public class Main {
         int popularPeople = 12_000_000;
         int newPeople = 17;
         int deadPeople = 8;
-        newPeople = popularPeople * newPeople / 1000;
-        deadPeople = popularPeople * deadPeople / 1000;
         int yers = 0;
         while (yers < 10) {
+            newPeople = popularPeople * newPeople / 1000;
+            deadPeople = popularPeople * deadPeople / 1000;
             yers++;
             popularPeople = popularPeople + newPeople + deadPeople;
             System.out.println("Год " + yers + " численность населения составляет " + popularPeople + " человек");
@@ -41,42 +41,38 @@ public class Main {
 
         // Задача 4
         int contribution = 15_000;
-        int totalSaving = 0;
         mounth = 0;
-        while (totalSaving <= 12_000_000) {
+        while (contribution <= 12_000_000) {
             mounth++;
-            totalSaving = totalSaving + contribution * 7 / 100;
-            System.out.println("Месяц " + mounth + " сумма накоплений " + totalSaving + " рублей.");
+            contribution = contribution + contribution * 7 / 100;
+            System.out.println("Месяц " + mounth + " сумма накоплений " + contribution + " рублей.");
         }
 
 
         // Задача 5
         contribution = 15_000;
-        totalSaving = 0;
         mounth = 0;
-        while (totalSaving < 12_000_000) {
+        while (contribution < 12_000_000) {
             mounth++;
-            totalSaving = totalSaving + contribution * 7 / 100;
+            contribution = contribution + contribution * 7 / 100;
             if (mounth % 6 == 0) {
-                System.out.println("Месяц " + mounth + " сумма накоплений " + totalSaving + " рублей.");
+                System.out.println("Месяц " + mounth + " сумма накоплений " + contribution + " рублей.");
             }
         }
 
         //Задача 6
         contribution = 15_000;
-        totalSaving = 0;
         mounth = 0;
         for (; mounth <= 108; mounth++) {
-            totalSaving = totalSaving + contribution * 7 / 100;
+            contribution = contribution + contribution * 7 / 100;
             if (mounth % 6 == 00) {
-                System.out.println("Месяц " + mounth + " сумма накоплений " + totalSaving + " рублей.");
+                System.out.println("Месяц " + mounth + " сумма накоплений " + contribution + " рублей.");
             }
         }
 
         // Задача 7
         int friday = 1;
-        int totalDay = 1;
-        for (; totalDay < 31; totalDay++) {
+        for (int totalDay = 1; totalDay < 31; totalDay = totalDay + 7) {
             if (totalDay == friday) {
                 friday = friday + 7;
                 System.out.println("Сегодня пятница, " + friday + "-е число. Необходимо подготовить отчет!");
