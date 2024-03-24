@@ -72,13 +72,10 @@ public class Main {
 
         // Задача 7
         int friday = 1;
-        for (int totalDay = 1; totalDay < 31; totalDay = totalDay + 7) {
-            if (totalDay == friday) {
-                friday = friday + 7;
-                System.out.println("Сегодня пятница, " + friday + "-е число. Необходимо подготовить отчет!");
-            } else {
-                System.out.println("Сегодня сдавать отчет не нужно!");
-            }
+        while (friday < 31) {
+            System.out.println("Сегодня пятница, " + friday + "-е число. Необходимо подготовить отчет!");
+            friday += 7;
+
         }
 
 
